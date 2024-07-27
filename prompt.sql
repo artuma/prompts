@@ -61,3 +61,4 @@ SELECT courier_id,
 FROM   couriers
 ORDER BY birth_year desc, courier_id
 
+SELECT
