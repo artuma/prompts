@@ -61,4 +61,7 @@ SELECT courier_id,
 FROM   couriers
 ORDER BY birth_year desc, courier_id
 
-SELECT
+select product_id, name, price as old_price, price + (price/100*5) as new_price
+from products
+order by new_price desc,product_id asc
+/* цену повысить на 5 % */
