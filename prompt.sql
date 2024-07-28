@@ -65,3 +65,16 @@ select product_id, name, price as old_price, price + (price/100*5) as new_price
 from products
 order by new_price desc,product_id asc
 /* цену повысить на 5 % */
+
+SELECT ROUND(100.5454, 2)
+Результат:
+100.55
+
+SELECT ROUND(100.551, 1)
+Результат:
+100.6
+
+SELECT ROUND(100.5511)
+Результат:
+101.0
+
