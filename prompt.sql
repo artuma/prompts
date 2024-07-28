@@ -85,3 +85,13 @@ SELECT product_id,
 FROM   products
 ORDER BY new_price desc, product_id
 -- с функцией round
+
+SELECT name,
+       CASE 
+       WHEN name='телятина' OR name='баранина' OR name='курица' THEN 'мясо'
+       WHEN name='треска' OR name='форель' OR name='окунь' THEN 'рыба'
+       ELSE 'другое'
+       END AS сategory
+FROM table
+
+
