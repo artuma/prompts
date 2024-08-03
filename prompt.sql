@@ -116,3 +116,9 @@ SELECT product_id,
        round(price - price/120*20, 2) as price_before_tax
 FROM   products
 ORDER BY price_before_tax desc, product_id
+-- фильтрация
+SELECT column_1, column_2
+FROM table
+WHERE column_2 >= 0
+ORDER BY column_1
+LIMIT 100
