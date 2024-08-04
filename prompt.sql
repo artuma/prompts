@@ -128,3 +128,9 @@ FROM table
 WHERE column_2 >= 0
 ORDER BY column_1
 LIMIT 100
+-- where и условия
+SELECT column_1, column_2, column_3
+FROM table
+WHERE column_1 >= 0 
+      AND column_2 = 'some text' 
+      AND column_3 = '2022-12-31'
