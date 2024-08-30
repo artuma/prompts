@@ -108,37 +108,3 @@ SELECT product_id,
             else 0 end new_price
 FROM   products
 ORDER BY new_price desc, product_id
-
-SELECT product_id,
-       name,
-       price,
-       round(price/120*20, 2) as tax,
-       round(price - price/120*20, 2) as price_before_tax
-FROM   products
-ORDER BY price_before_tax desc, product_id
--- фильтрация
-/* 
-Сначала выполняется оператор FROM — происходит выбор нужной таблицы.
-Далее WHERE — отфильтровываются строки, соответствующие условию.
-Затем SELECT — отбираются указанные столбцы и применяются функции.
-Потом ORDER BY — производится сортировка результирующей таблицы.
-И в самом конце LIMIT — ограничивается количество выводимых записей.*/
-SELECT column_1, column_2
-FROM table
-WHERE column_2 >= 0
-ORDER BY column_1
-LIMIT 100
--- where и условия
-SELECT column_1, column_2, column_3
-FROM table
-WHERE column_1 >= 0 
-      AND column_2 = 'some text' 
-      AND column_3 = '2022-12-31'
-
-SELECT user_id,
-       order_id,
-       time
-FROM   user_actions
-WHERE  action = 'create_order'
-   and time > '2022-09-06'
-ORDER BY order_id
