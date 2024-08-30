@@ -108,3 +108,12 @@ SELECT product_id,
             else 0 end new_price
 FROM   products
 ORDER BY new_price desc, product_id
+/*Назначьте скидку 20% на все товары из таблицы products и отберите те, цена на которые с учётом скидки превышает 100 рублей. Выведите id товаров, их наименования, прежнюю цену и новую цену с учётом скидки. */
+SELECT
+  product_id,
+  name,
+  price as old_price,
+  price - price * 20 / 100 as new_price
+FROM products
+where (price - price * 20 / 100) > 100
+-- или ... price*0.8 as new_price
