@@ -117,3 +117,10 @@ SELECT
 FROM products
 where (price - price * 20 / 100) > 100
 -- или ... price*0.8 as new_price
+/*Отберите из таблицы products все товары, названия которых либо начинаются со слова «чай», либо состоят из пяти символов.*/
+SELECT product_id,
+       name
+FROM   products
+WHERE  split_part(name, ' ', 1) = 'чай'
+    or length(name) = 5
+ORDER BY product_id asc
