@@ -124,3 +124,9 @@ FROM   products
 WHERE  split_part(name, ' ', 1) = 'чай'
     or length(name) = 5
 ORDER BY product_id asc
+-- like
+SELECT product_id,
+       name
+FROM   products
+WHERE  name like '%чай%'
+ORDER BY product_id asc
