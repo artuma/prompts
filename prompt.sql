@@ -130,3 +130,5 @@ SELECT product_id,
 FROM   products
 WHERE  name like '%чай%'
 ORDER BY product_id asc
+-- исключит 2 и > слова
+and name not like '% %'
