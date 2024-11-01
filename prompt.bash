@@ -24,8 +24,8 @@ rm -r dir
 ls -l 1> sout
 # вывести в STDOUT содержимое sout
 cat sout
-#
-
+# переместить файл
+mv file ./dir
 #
 
 #
