@@ -1,0 +1,62 @@
+python -m venv venv
+source venv/bin/activate
+deactivate
+     python3.7 -m venv legacy_project
+     python3.10 -m venv new_project
+pip install --upgrade pip # обновит pip
+pip install django
+pip install django==3.2
+pip install "django>=3.2,<4.0"
+python -m django --version
+     pip freeze > requirements.txt #зафиксирует зависимости в файле
+     pip install -r requirements.txt #установит зависимости из файла
+pip uninstall <package_name> # удалит пакет
+     pip list
+
+1
+
+python -m venv env
+source env/bin/activate  # для Linux/Mac
+env\Scripts\activate     # для Windows
+
+2
+
+pip install django
+
+3
+
+django-admin startproject myproject
+
+4
+
+cd myproject
+
+5
+
+python manage.py runserver
+
+
+myproject/
+├── apps/                # Здесь будут лежать все ваши приложения
+├── config/              # Настройки проекта
+│   ├── __init__.py
+│   ├── settings/
+│   │   ├── base.py      # Основные настройки
+│   │   ├── dev.py       # Настройки для разработки
+│   │   └── prod.py      # Настройки для продакшена
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+├── manage.py
+├── requirements.txt
+
+
+    Каталог apps/:
+       Все приложения находиться в одном месте.
+    Каталог config/:
+        Настройки раздельные для разных сред: base.py, dev.py и prod.py.
+В файле manage.py и wsgi.py можно указать, с каким файлом использовать настройки:
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.dev')
+
+
+
